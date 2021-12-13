@@ -387,7 +387,9 @@ $('#startBtn').on('click', () => {
   updateStatus();
 });
 $('#flipOrientationBtn').on('click', board.flip);
-$('#flipOrientationBtn').on('click', makeSmartMove);
+$('#flipOrientationBtn').on('click', () => {
+    if (!gameOver()) makeSmartMove();
+});
 
     </script>
   </body>
